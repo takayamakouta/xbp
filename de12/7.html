@@ -7,26 +7,35 @@
 <hr>
 <div>
 <h1>個人のおすすめエリア</h1>
-<h2></h2>
+<h2>一人暮らしをするときの大事な点（私的）</h2>
 <ul>
-<li>テーマ:住</li>
-<li>テーマの内容：みなとみらいに来ている人たちの構成</li>
-<li>場所：マークイズ前</li>
-<li>調査内容：グループ構成の人数、年齢、性別、(全てこちらの予測）</li>
+<li>合計時間が40分以下</li>
+<li>徒歩が15分程度</li>
+<li>家賃７万以下</li>
+<img src="images/スクリーンショット 2022-01-07 11.52.55.png" width="70%"
 </ul>
-<h2>調査結果</h2>
-<img src="images/図1.png" width="70%"<br/>
-<img src="images/図2.png" width="70%"
-<ul>
-<li>男女ともに1人で来る人が多い</li>  
-<li>ペアで来る場合は男女の場合が多い</li> 
-<li>3人以上のグループは少ない</li>
-<li>親子も多く、マークイズに行く人やその前で遊んでいる人もいた</li>
-</ul>
-<h2>まとめ</h2>
-今回の調査を始める前の私たちの予測としてマークイズ前の通りには、<br>
-大人数で来ている人が多く、若者が次に多いと予測していましたが、<br>
-結果としては、1人で来ている人が多く、次に多かったのは老人であったことに驚きました。
+<h2>ソースコード</h2>
+<code>
+    <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+    <li style="background-color:#EFF;">import pandas as pd  # データ分析に用いるライブラリ</li>
+    <li style="background-color:#EEF;">import matplotlib.pyplot as plt  # グラフ表示に用いるライブラリ</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">pd.set_option('display.unicode.east_asian_width', True)  # 表示のずれを少し緩和</li>
+    <li style="background-color:#EFF;">plt.rcParams['font.family'] = 'IPAexGothic'  # グラフ表示におけるフォントの指定</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">data_path = "./data.csv"</li>
+    <li style="background-color:#EFF;">df_data = pd.read_csv(data_path,  encoding="utf-8-sig")</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">df_data.groupby("路線").mean().loc[:,["合計時間","家賃","徒歩",]].plot.bar(subplots=True,</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layout=(2,2),</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;figsize=(16,10))</li>
+    <li style="background-color:#EEF;">plt.subplots_adjust(bottom=0.4)</li>
+    <li style="background-color:#EFF;">plt.show()</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">print(df_data.columns)</li>
+    <li style="background-color:#EEF;">print(df_data)</li>
+    </ol></code>
 </div>
 </body>
 </html>

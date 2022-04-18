@@ -1,0 +1,142 @@
+<head>
+<title>XBPは止まらない</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<hi>第6回課題</hi>
+<hr>
+<div>
+<h2>関東人と関西人、どちらに近いか診断</h2>
+関東と関西の衣食住の文化の違いを利用し、<br>
+ポイント制で点数をつけていくことで関東と関西の<br>
+どちらに自分が似通っているのかを診断するシステムです。<br>
+</div>
+<div>
+    <code>
+        <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">#関東人ポイント、関西人ポイントを0で初期化</li>
+        <li style="background-color:#EEF;">p_east=0</li>
+        <li style="background-color:#EFF;">p_west=0</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">#質問1</li>
+        <li style="background-color:#EFF;">print(<font style="color:brown;">'肉まんor豚まん?'</font>)</li>
+        <li style="background-color:#EEF;">print(<font style="color:brown;">'1:肉まん\n2:豚まん'</font>)</li>
+        <li style="background-color:#EFF;">print(<font style="color:brown;">'あなたの解答&gt;&gt;&gt;&gt;'</font>,end=<font style="color:brown;">""</font>)</li>
+        <li style="background-color:#EEF;">q1=int(input())</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">#回答に応じて関東人、関西人ポイントのそれぞれに加算</li>
+        <li style="background-color:#EFF;">if q1==1:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;p_east+=1</li>
+        <li style="background-color:#EFF;">elif q1==2:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;p_west+=1</li>
+        <li style="background-color:#EFF;">else:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(<font style="color:brown;">'数値の1か2を押して下さい。'</font>)</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">#質問2</li>
+        <li style="background-color:#EFF;">print(<font style="color:brown;">'よく見かける揚げせんべいは？'</font>)</li>
+        <li style="background-color:#EEF;">print(<font style="color:brown;">'1:ぼんち揚げ\n2:歌舞伎揚げ'</font>)</li>
+        <li style="background-color:#EFF;">print(<font style="color:brown;">'あなたの解答&gt;&gt;&gt;&gt;'</font>,end=<font style="color:brown;">""</font>)</li>
+        <li style="background-color:#EEF;">q2=int(input())</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">#回答に応じて関東人、関西人ポイントのそれぞれに加算</li>
+        <li style="background-color:#EFF;">if q2==1:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;p_west+=1</li>
+        <li style="background-color:#EFF;">elif q2==2:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;p_east+=1</li>
+        <li style="background-color:#EFF;">else:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(<font style="color:brown;">'数値の1か2を押して下さい。'</font>)</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">#質問3</li>
+        <li style="background-color:#EEF;">print(<font style="color:brown;">'あなたの性格は？'</font>)</li>
+        <li style="background-color:#EFF;">print(<font style="color:brown;">'1:人目を気にする\n2:せっかちでおしゃべり'</font>)</li>
+        <li style="background-color:#EEF;">print(<font style="color:brown;">'あなたの解答&gt;&gt;&gt;&gt;'</font>,end=<font style="color:brown;">""</font>)</li>
+        <li style="background-color:#EFF;">q3=int(input())</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">#回答に応じて関東人、関西人ポイントのそれぞれに加算</li>
+        <li style="background-color:#EEF;">if q3==1:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;p_east+=1</li>
+        <li style="background-color:#EEF;">elif q3==2:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;p_west+=1</li>
+        <li style="background-color:#EEF;">else:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(<font style="color:brown;">'数値の1か2を押して下さい。'</font>)</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">#質問4</li>
+        <li style="background-color:#EFF;">print(<font style="color:brown;">'長さを測るものは？'</font>)</li>
+        <li style="background-color:#EEF;">print(<font style="color:brown;">'1:ものさし\n2:定規'</font>)</li>
+        <li style="background-color:#EFF;">print(<font style="color:brown;">'あなたの解答&gt;&gt;&gt;&gt;'</font>,end=<font style="color:brown;">""</font>)</li>
+        <li style="background-color:#EEF;">q4=int(input())</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">#回答に応じて関東人、関西人ポイントのそれぞれに加算</li>
+        <li style="background-color:#EFF;">if q4==1:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;p_west+=1</li>
+        <li style="background-color:#EFF;">elif q4==2:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;p_east+=1</li>
+        <li style="background-color:#EFF;">else:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(<font style="color:brown;">'数値の1か2を押して下さい。'</font>)</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">#質問5</li>
+        <li style="background-color:#EEF;">print(<font style="color:brown;">'「ユニバーサル・スタジオ・ジャパン」は？'</font>)</li>
+        <li style="background-color:#EFF;">print(<font style="color:brown;">'1:USJ\n2:ユニバ'</font>)</li>
+        <li style="background-color:#EEF;">print(<font style="color:brown;">'あなたの解答&gt;&gt;&gt;&gt;'</font>,end=<font style="color:brown;">""</font>)</li>
+        <li style="background-color:#EFF;">q5=int(input())</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">#回答に応じて関東人、関西人ポイントのそれぞれに加算</li>
+        <li style="background-color:#EEF;">if q5==1:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;p_east+=1</li>
+        <li style="background-color:#EEF;">elif q5==2:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;p_west+=1</li>
+        <li style="background-color:#EEF;">else:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(<font style="color:brown;">'数値の1か2を押して下さい。'</font>)</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">#質問6</li>
+        <li style="background-color:#EFF;">print(<font style="color:brown;">'桜餅と言えば？'</font>)</li>
+        <li style="background-color:#EEF;">print(<font style="color:brown;">'1:まんじゅう型\n2:クレープ型'</font>)</li>
+        <li style="background-color:#EFF;">print(<font style="color:brown;">'あなたの解答&gt;&gt;&gt;&gt;'</font>,end=<font style="color:brown;">""</font>)</li>
+        <li style="background-color:#EEF;">q6=int(input())</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;">#回答に応じて関東人、関西人ポイントのそれぞれに加算</li>
+        <li style="background-color:#EFF;">if q6==1:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;p_east+=1</li>
+        <li style="background-color:#EFF;">elif q6==2:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;p_west+=1</li>
+        <li style="background-color:#EFF;">else:</li>
+        <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(<font style="color:brown;">'数値の1か2を押して下さい。'</font>)</li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">#質問7</li>
+        <li style="background-color:#EEF;">print(<font style="color:brown;">'いっせーの、'</font>)</li>
+        <li style="background-color:#EFF;">print(<font style="color:brown;">'1:「せっ！」\n2:「でっ！」'</font>)</li>
+        <li style="background-color:#EEF;">print(<font style="color:brown;">'あなたの解答&gt;&gt;&gt;&gt;'</font>,end=<font style="color:brown;">""</font>)</li>
+        <li style="background-color:#EFF;">q7=int(input())</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">#回答に応じて関東人、関西人ポイントのそれぞれに加算</li>
+        <li style="background-color:#EEF;">if q7==1:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;p_east+=1</li>
+        <li style="background-color:#EEF;">elif q7==2:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;p_west+=1</li>
+        <li style="background-color:#EEF;">else:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(<font style="color:brown;">'数値の1か2を押して下さい。'</font>)</li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;"></li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">#関東人ポイントと関西人ポイントのどちらが多いか</li>
+        <li style="background-color:#EEF;">if p_east&gt;p_west:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;msg=<font style="color:brown;">'あなたは【関東人】です。'</font></li>
+        <li style="background-color:#EEF;">elif p_west&gt;p_east:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;msg=<font style="color:brown;">'あなたは【関西人】です。'</font></li>
+        <li style="background-color:#EEF;">else:</li>
+        <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;msg=<font style="color:brown;">'あなたは【ハイブリッド】です。'</font></li>
+        <li style="background-color:#EEF;"></li>
+        <li style="background-color:#EFF;">print(<font style="color:brown;">'あなたの【関東人ポイント】は【'</font>+str(p_east)+<font style="color:brown;">'】で、【関西人ポイント】は【'</font>+str(p_west)+<font style="color:brown;">'】です。'</font>)</li>
+        <li style="background-color:#EEF;">print(<font style="color:brown;">'結果は'</font>+msg)</li>
+        </ol></code>
+</div>
+</body>
+</html>

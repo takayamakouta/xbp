@@ -3,11 +3,41 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<hi>第3回課題</hi>
+<hi>第2回課題</hi>
 <hr>
-<h2>テーマ</h2>
-観察のテーマ・・・住
-<h2>観察の内容</h2>
-みなとみらいに来ている人たちの構成（人数・年齢・性別）
+<h2>光を操る</h2>
+光色をランダムにすることができる。
+<code>
+    <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+    <li style="background-color:#EFF;">#include &lt;Adafruit_NeoPixel.h&gt;</li>
+    <li style="background-color:#EEF;">#define PIN        9 // 信号用のピンを指定</li>
+    <li style="background-color:#EFF;">#define NUMPIXELS 5 // LEDの数を指定</li>
+    <li style="background-color:#EEF;">int brightness=50;//明るさ</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">void setup() {</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;pixels.begin(); // NeoPixel出力ピンの初期化</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;pixels.setBrightness(brightness);</li>
+    <li style="background-color:#EFF;">}</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">void loop() {</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;pixels.clear(); // すべてのLEDの色を0にセット</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;for(int i=0; i&lt;NUMPIXELS; i++) {</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;int r=random(250,250);</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;int g=random(255,255);</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;int b=random(0,255);</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;pixels.setPixelColor(i, pixels.Color(r, g, b));</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;pixels.show();</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;delay(300);</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;}</li>
+    <li style="background-color:#EEF;">}</li>
+    </ol></code>
+<h2>グループワーク＜POV＞</h2>
+<img src="images/IMG_7314.JPG" width=40%><br>
+<img src="images/IMG_7315.PNG" width=40%><br>
+<img src="images/IMG_7316.PNG" width=40%><br>
+<img src="images/IMG_7317.jpg" width=60%><br>
 </body>
 </html>
